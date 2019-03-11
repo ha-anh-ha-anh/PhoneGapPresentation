@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Title of the document</title>
+    <!-- Material Icon CDN -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Your custom styles -->
+      <link rel="stylesheet" href="css/style.css">
+    <!-- Used as an example only to position the footer at the end of the page.
+    You can delete these styles or move it to your custom css file -->
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="cyan">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="#" class="brand-logo">LOGO</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">item1</a></li>
+              <li><a href="#">item2</a></li>
+              <li><a href="#">item3</a></li>
+              <li><a href="#">item4</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+              <li>
+                <div class="userView">
+                  <div class="background">
+                    <img src="http://lorempixel.com/output/abstract-q-c-640-480-10.jpg" alt="Background Sidenav">
+                  </div>
+                  <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                  <a href="#!name"><span class="white-text name">John Doe</span></a>
+                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div>
+              </li>
+              <li><a href="#">item1</a></li>
+              <li><a href="#">item2</a></li>
+              <li><a href="#">item3</a></li>
+              <li><a href="#">item4</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Your content here -->
+      <a href="#" class="waves-effect waves-light btn">Button</a>
+      <a href="#" class="waves-effect waves-light btn red">Button</a>
+      <a href="#" class="waves-effect waves-light btn light-blue">Button</a>
+      <a href="#" class="btn disabled">button</a>
+      <a href="#" class="waves-effect waves-teal btn-flat">button</a>
+      <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+      <div class="fixed-action-btn click-to-toggle">
+        <a class="btn-floating btn-large red"><i class="large material-icons">add</i></a>
+        <ul>
+          <li><a href="#" class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+          <li><a href="#" class="btn-floating yellow"><i class="material-icons">format_quote</i></a></li>
+          <li><a href="#" class="btn-floating green"><i class="material-icons">publish</i></a></li>
+          <li><a href="#" class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="" alt=""/>
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+      <ul class="collection">
+        <li class="collection-item">Alvin</li>
+        <li class="collection-item">Alvin</li>
+        <li class="collection-item">Alvin</li>
+      </ul>
+      <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+      <div class="preloader-wrapper active">
+        <!-- spinner-blue -->
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <!-- spinner-red -->
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <!-- spinner-yellow -->
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <!-- spinner-greem -->
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <form action="">
+        <div class="input-field col s12 l6">
+          <input type="text" id="first_name" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s12 l6">
+          <input type="text" id="last_name" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="email" id="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
+        </div>
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+        <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+      </form>
+    </main>
+    </footer>
+    <!-- jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Materialize JS CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+      $("document").ready(function(){
+        $(".button-collapse").sideNav();
+      });
+    </script>
+  </body>
+</html>

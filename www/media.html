@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        ul {list-style-type: none; font-size: 20px;}
+        ul > li { padding: 3px;}
+    </style>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <!-- <script type="text/javascript" src="js/media.js"></script> -->
+</head>
+
+<body>
+    <div>
+        <h3>List Media</h3>
+        <ul>
+            <li onclick="chooseMediaFile('m1.mp3')">m1.mp3</li>
+            <li onclick="chooseMediaFile('m2.mp3')">m2.mp3</li>
+            <li onclick="chooseMediaFile('m3.mp3')">m3.mp3</li>
+        </ul>
+    </div>
+    <div>
+        <button id="playAudio" onclick="playAudio()">PLAY</button>
+        <button id="pauseAudio" onclick="pauseAudio()">PAUSE</button>
+        <button id="stopAudio" onclick="stopAudio()">STOP</button>
+        <button id="volumeUp" onclick="volumeUp()">VOLUME UP</button>
+        <button id="volumeDown" onclick="volumeDown()">VOLUME DOWN</button>
+    </div>
+    <script>
+        var myMedia = null;
+        var mediaSrc = "m1.mp3";
+
+        function chooseMediaFile(file) {
+            mediaSrc = file;
+            stopAudio();
+        }
+        function playAudio() {
+            var src = "/android_asset/www/audio/" + mediaSrc;
+
+            if (myMedia === null) {
+                myMedia = new Media(src, onSuccess, onError);
+
+                function onSuccess() {
+                    alert("playAudio Success");
+                }
+
+                function onError(error) {
+                    alert("playAudio Error: " + error.code);
+                }
+            }
+            myMedia.play();
+        }
+        function pauseAudio() {
+            if (myMedia) {
+                myMedia.pause();
+            }
+        }
+        function stopAudio() {
+            if (myMedia) {
+                myMedia.stop();
+            }
+            myMedia = null;
+        }
+        var volumeValue = 0.5;
+        function volumeUp() {
+            if (myMedia && volumeValue < 1) {
+                myMedia.setVolume(volumeValue += 0.1);
+            }
+        }
+        function volumeDown() {
+            if (myMedia && volumeValue > 0) {
+                myMedia.setVolume(volumeValue -= 0.1);
+            }
+        }
+    </script>
+</body>
+
+</html>

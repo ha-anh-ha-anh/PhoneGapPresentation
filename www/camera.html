@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <button onclick="takeASelfie()">Take a selfie</button>
+        <img id="result" src="" alt="" style="width: 100%; height: auto">
+        <script>
+            function takeASelfie() {
+                navigator.camera.getPicture(data => {
+                    document.getElementById('result').src = data;
+                })
+            }
+        </script>
+    </div>
+</body>
+
+</html>
